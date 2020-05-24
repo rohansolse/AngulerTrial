@@ -1,3 +1,29 @@
-<p>
-  forms works!
-</p>
+<section [class.hide]="isSubmitted">
+    <div class="input-group">
+        <label>Name : </label>
+        <input name="name" type="text" (keyup)="setValue($event)" [value]="person.name">
+    </div>
+    <div class="input-group">
+        <label>Email : </label>
+        <input name="email" type="text" (keyup)="setValue($event)" [value]="person.email">
+    </div>
+    <div class="input-group">
+        <label>Company : </label>
+        <input name="company" type="text" (keyup)="setValue($event)" [value]="person.company">
+    </div>
+    <div class="input-group">
+        <label>Salary : </label>
+        <input name="salary" type="text" (keyup)="setValue($event)" [value]="person.salary">
+    </div>
+    <div class="input-group"><button (click)="submitData()">Submit</button></div>
+</section>
+
+<section [class.hide]="!isSubmitted">
+    <p>Thank you! for your details</p>
+    <hr>
+    <p>Name : {{person.name}}</p>
+    <p>Email : {{person.email}}</p>
+    <p>company : {{person.company}}</p>
+    <p>Salary : {{person.salary}}</p>
+    <div class="input-group"><button (click)="resetForm()">Submit One More</button></div>
+</section>
