@@ -6,6 +6,7 @@ import { FormsComponent } from './forms/forms.component';
 import { SmallProjectComponent } from './small-project/small-project.component';
 import { NgStyleANDngClassComponent } from './ng-style-andng-class/ng-style-andng-class.component';
 import { NgifComponent } from './ngif/ngif.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { NgifComponent } from './ngif/ngif.component';
     FormsComponent,
     SmallProjectComponent,
     NgStyleANDngClassComponent,
-    NgifComponent
+    NgifComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule

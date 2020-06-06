@@ -1,0 +1,17 @@
+<!-- <p>ng-for works!</p> -->
+<section *ngIf="currentUser">
+    Name : 
+    <input type="text" [value]="currentUser.name" name="name" (keyup)="setValue($event)">
+    Email :
+    <input type="text" [value]="currentUser.email" name="email" (keyup)="setValue($event)">
+    Website : 
+    <input type="text" [value]="currentUser.website" name="website" (keyup)="setValue($event)">
+</section>
+<hr>
+<div *ngFor="let person of details">
+    <h4>{{person.name}}</h4>
+    <p>{{person.email}}</p>
+    <p>{{person.website}}</p>
+    <button (click)="ShowAndEdit(person)">ShowAndEdit</button>
+    <hr>
+</div>

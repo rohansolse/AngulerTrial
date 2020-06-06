@@ -12,7 +12,7 @@ export class NgifComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectedLanguage = ''
+  selectedLanguage = null;
 
   optionHandler(event){
     this.selectedLanguage = event.target.value;
