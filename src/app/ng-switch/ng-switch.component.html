@@ -1,0 +1,18 @@
+<!-- <p>ng-switch works!</p> -->
+<div class="main">
+    <h4>Enter no Between 1 - 9</h4>
+    <input type="text" (keyup)="userInput($event)">
+    <hr>
+    <section [ngSwitch]="value">
+        <p *ngSwitchCase="1">Its for Rohan</p>
+        <p *ngSwitchCase="2">Its for Roshan</p>
+        <p *ngSwitchCase="3">Its for Rohit</p>
+        <p *ngSwitchCase="4">Its for Rohini</p>
+        <p *ngSwitchCase="5">Its for Ram</p>
+        <p *ngSwitchCase="6">Its for Yash</p>
+        <p *ngSwitchCase="7">Its for Sagar</p>
+        <p *ngSwitchCase="8">Its for Karan</p>
+        <p *ngSwitchCase="9">Its for Abhi</p>
+        <p *ngSwitchDefault>Please Enter No which laying Between 1 - 9</p>
+    </section>
+</div>

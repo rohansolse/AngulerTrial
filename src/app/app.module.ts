@@ -7,6 +7,8 @@ import { SmallProjectComponent } from './small-project/small-project.component';
 import { NgStyleANDngClassComponent } from './ng-style-andng-class/ng-style-andng-class.component';
 import { NgifComponent } from './ngif/ngif.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import { NgSwitchAdvComponent } from './ng-switch-adv/ng-switch-adv.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { NgForComponent } from './ng-for/ng-for.component';
     SmallProjectComponent,
     NgStyleANDngClassComponent,
     NgifComponent,
-    NgForComponent
+    NgForComponent,
+    NgSwitchComponent,
+    NgSwitchAdvComponent
   ],
   imports: [
     BrowserModule
