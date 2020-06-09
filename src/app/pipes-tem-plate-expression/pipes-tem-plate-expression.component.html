@@ -1,0 +1,52 @@
+<!-- <p>pipes-tem-plate-expression works!</p> -->
+<p>Name : {{ Uname | lowercase }}</p>
+<p>Name : {{ Lname | uppercase }}</p>
+<p>Title : {{ title | titlecase }}</p>
+<hr>
+<p>Today : {{ today }}</p>
+<p>Today date : {{ today | date }}</p>
+<p>Today short : {{ today | date:'short' }}</p>
+<p>Today medium : {{ today | date:'medium' }}</p>
+<p>Today long : {{ today | date:'long' }}</p>
+<hr>
+<p>Today fullDate : {{ today | date:'fullDate' }}</p>
+<p>Today shortDate : {{ today | date:'shortDate' }}</p>
+<p>Today mediumDate : {{ today | date:'mediumDate' }}</p>
+<p>Today longDate : {{ today | date:'longDate' }}</p>
+<hr>
+<p>Today fullTime : {{ today | date:'fullTime' }}</p>
+<p>Today shortTime : {{ today | date:'shortTime' }}</p>
+<p>Today mediumTime : {{ today | date:'mediumTime' }}</p>
+<p>Today longTime : {{ today | date:'longTime' }}</p>
+<hr>
+<p>Today fullDate : {{ today | date:'fullDate' | lowercase}}</p>
+<hr>
+<p>Num : {{ num }}</p>
+<p>Num : {{ num | number:'2.1-2'}}</p>
+<p>Num : {{ num | number:'3.0-1'}}</p>
+<hr>
+<p>Num2 percent : {{ num2 | percent:'2.0-1'}}</p>
+<hr>
+<p>Amount : {{ amount | currency:'INR':'code' }}</p>
+<p>Amount : {{ amount | currency:'INR':'symbol' }}</p>
+<p>Amount : {{ amount | currency:'CAD':'code' }}</p>
+<p>Amount : {{ amount | currency:'CAD':'symbol' }}</p>
+<p>Amount : {{ amount | currency:'CAD':'symbol-narrow' }}</p>
+<hr>
+<section>
+    <div *ngFor="let data of person | keyvalue">
+        <p>{{ data.key }} | {{ data.value }}</p>
+    </div>
+</section>
+<hr>
+<p>Slice : {{ word | slice:-4 }}</p>
+<p>Slice : {{ word | slice:-4:-2 }}</p>
+<p>Slice : {{ word | slice:1:8 }}</p>
+<section>
+    <ul>
+        <li *ngFor="let word of words | slice:0:3">{{ word }}</li>
+    </ul>
+</section>
+<hr>
+<p>{{ person | json }}</p>
+<p>{{ words | json }}</p>
