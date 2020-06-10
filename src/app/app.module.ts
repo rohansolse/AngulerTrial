@@ -10,6 +10,7 @@ import { NgForComponent } from './ng-for/ng-for.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgSwitchAdvComponent } from './ng-switch-adv/ng-switch-adv.component';
 import { PipesTemPlateExpressionComponent } from './pipes-tem-plate-expression/pipes-tem-plate-expression.component';
+import { TemplateVariableComponent } from './template-variable/template-variable.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PipesTemPlateExpressionComponent } from './pipes-tem-plate-expression/p
     NgForComponent,
     NgSwitchComponent,
     NgSwitchAdvComponent,
-    PipesTemPlateExpressionComponent
+    PipesTemPlateExpressionComponent,
+    TemplateVariableComponent
   ],
   imports: [
     BrowserModule
