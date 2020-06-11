@@ -7,5 +7,7 @@
 <!-- <app-ng-switch-adv></app-ng-switch-adv> -->
 <!-- <app-pipes-tem-plate-expression></app-pipes-tem-plate-expression> -->
 <!-- <app-template-variable></app-template-variable> -->
-<app-header></app-header>
-<app-profile></app-profile>
+<!-- <app-header></app-header> -->
+<!-- <app-profile></app-profile> -->
+<input type="text" (keyup.enter)="passValue($event)">
+<app-child [name]="data"></app-child>

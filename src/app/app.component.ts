@@ -6,5 +6,10 @@ import { Component } from "@angular/core";
     styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-    
+    data : string
+    passValue({target}){
+        let {value} = target
+        console.log(value)
+        this.data = value
+    }
 }

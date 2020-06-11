@@ -13,6 +13,7 @@ import { PipesTemPlateExpressionComponent } from './pipes-tem-plate-expression/p
 import { TemplateVariableComponent } from './template-variable/template-variable.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProfileComponent } from './profile/profile.component';
     PipesTemPlateExpressionComponent,
     TemplateVariableComponent,
     HeaderComponent,
-    ProfileComponent
+    ProfileComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule
