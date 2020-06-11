@@ -1,0 +1,16 @@
+ul{
+    border-bottom: 2px solid black;
+    margin: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+input{
+    margin-right: 10px;
+}

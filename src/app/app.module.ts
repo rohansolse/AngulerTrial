@@ -11,6 +11,8 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgSwitchAdvComponent } from './ng-switch-adv/ng-switch-adv.component';
 import { PipesTemPlateExpressionComponent } from './pipes-tem-plate-expression/pipes-tem-plate-expression.component';
 import { TemplateVariableComponent } from './template-variable/template-variable.component';
+import { HeaderComponent } from './header/header.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { TemplateVariableComponent } from './template-variable/template-variable
     NgSwitchComponent,
     NgSwitchAdvComponent,
     PipesTemPlateExpressionComponent,
-    TemplateVariableComponent
+    TemplateVariableComponent,
+    HeaderComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule
