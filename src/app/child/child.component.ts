@@ -7,11 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-    constructor() { }
+    @Input() name: string;
 
-    ngOnInit() {
+    @Input() list: string[];
+
+    @Input() msg: Number;
+
+    constructor() {
+
     }
-
-    @Input() name : string
-
+    
+    ngOnInit() {
+        console.log("0000 :",this.msg)
+    }
 }
