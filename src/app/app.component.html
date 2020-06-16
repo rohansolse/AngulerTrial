@@ -9,7 +9,12 @@
 <!-- <app-template-variable></app-template-variable> -->
 <!-- <app-header></app-header> -->
 <!-- <app-profile></app-profile> -->
-<!-- <input type="text" (keyup.enter)="passValue($event)">
-<app-child [name]="data"></app-child> -->
-Enter name of Hero to add in Hero List : <input type="text" name="" id="" (keyup.enter)="addHero($event)" >
-<app-child [list]="heroList" [msg]="isValueAdded"></app-child>
+<!-- <input type="text" (keyup.enter)="passValue($event)"> -->
+<!-- <app-child [name]="data"></app-child> -->
+<!-- Enter name of Hero to add in Hero List : <input type="text" name="" id="" (keyup.enter)="addHero($event)" > -->
+<!-- <app-child [list]="heroList" [msg]="isValueAdded"></app-child> -->
+Food list : 
+<ul>
+    <li *ngFor="let food of foodList">{{ food }}</li>
+</ul>
+<app-child (foodEvt)="addFruitInList($event)"></app-child>

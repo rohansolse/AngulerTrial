@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-child',
@@ -6,18 +6,22 @@ import { Component, OnInit, Input } from '@angular/core';
     styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
+    @Output() foodEvt: EventEmitter<string> = new EventEmitter<string>();
 
-    @Input() name: string;
+    // @Input() name: string;
 
-    @Input() list: string[];
+    // @Input() list: string[];
 
-    @Input() msg: Number;
+    // @Input() msg: any;
 
-    constructor() {
-
-    }
+    constructor() {}
     
-    ngOnInit() {
-        console.log("0000 :",this.msg)
+    ngOnInit() {}
+
+    addFood(event){
+        console.log(event.target.value, "add in the list")
+        this.foodEvt.emit(event.target.value)
+        event.target.value = ''
     }
+
 }

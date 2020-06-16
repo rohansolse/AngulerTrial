@@ -1,5 +1,5 @@
 <!-- <p>In child we got : {{ name }}</p> -->
-<section [ngSwitch]="msg">
+<!-- <section [ngSwitch]="msg">
     <p *ngSwitchDefault style="color : gray">Please enter name of Hero</p>
     <p *ngSwitchCase="1" style="color : green">hero is added in the list</p>
     <p *ngSwitchCase="2" style="color : red">hero is already present in the list</p>
@@ -8,4 +8,6 @@
 <p>Hero list is here : </p>
 <ul>
     <li *ngFor="let hero of list">{{ hero | titlecase }}</li>
-</ul>
+</ul> -->
+Enter name of fruits : 
+<input type="text" name="" id="" (keyup.enter)="addFood($event)">
