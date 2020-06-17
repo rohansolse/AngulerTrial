@@ -9,5 +9,9 @@
 <ul>
     <li *ngFor="let hero of list">{{ hero | titlecase }}</li>
 </ul> -->
-Enter name of fruits : 
-<input type="text" name="" id="" (keyup.enter)="addFood($event)">
+<!-- Enter name of fruits : 
+<input type="text" name="" id="" (keyup.enter)="addFood($event)"> -->
+FoodList :
+<ol>
+    <li *ngFor="let food of foodArryInChild; let i = index">{{ food }} <button (click)="deleteItem(i)">Delete</button></li>
+</ol>

@@ -13,8 +13,14 @@
 <!-- <app-child [name]="data"></app-child> -->
 <!-- Enter name of Hero to add in Hero List : <input type="text" name="" id="" (keyup.enter)="addHero($event)" > -->
 <!-- <app-child [list]="heroList" [msg]="isValueAdded"></app-child> -->
-Food list : 
+<!-- Food list : 
 <ul>
     <li *ngFor="let food of foodList">{{ food }}</li>
 </ul>
-<app-child (foodEvt)="addFruitInList($event)"></app-child>
+<app-child (foodEvt)="addFruitInList($event)"></app-child> -->
+
+Enter food to add : 
+<input type="text" name="" id="" (keyup.enter)="insertFood($event)">
+<hr>
+<app-child [foodArryInChild]="foodArray" (deletFoodEvt)="deleteFood($event)"></app-child>
+<p *ngIf="deletedFood">You deleted {{ deletedFood }}</p>

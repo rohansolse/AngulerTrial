@@ -28,10 +28,24 @@ export class AppComponent {
     //     }
     // }
 
-    foodList : string[] = []
-    constructor(){}
-    addFruitInList(fruit){
-        console.log("food in the list : ", fruit)
-        this.foodList.push(fruit)
+    // foodList : string[] = []
+    // constructor(){}
+    // addFruitInList(fruit){
+    //     console.log("food in the list : ", fruit)
+    //     this.foodList.push(fruit)
+    // }
+
+    foodArray: string[]=[]
+    insertFood(food){
+        if(this.foodArray.indexOf(food.target.value) == -1){
+            this.foodArray.push(food.target.value)
+            food.target.value = ''
+        }
+    }
+    deletedFood: string = null
+    deleteFood(foodIndex){
+        console.log("foodindex : ",foodIndex)
+        this.deletedFood = this.foodArray[foodIndex]
+        this.foodArray = this.foodArray.filter((val,index)=> index != foodIndex)
     }
 }
