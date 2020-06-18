@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { ThrowStmt } from "@angular/compiler";
 
 @Component({
     selector: "app-root",
@@ -35,17 +34,29 @@ export class AppComponent {
     //     this.foodList.push(fruit)
     // }
 
-    foodArray: string[]=[]
-    insertFood(food){
-        if(this.foodArray.indexOf(food.target.value) == -1){
-            this.foodArray.push(food.target.value)
-            food.target.value = ''
-        }
+    // foodArray: string[]=[]
+    // insertFood(food){
+    //     if(this.foodArray.indexOf(food.target.value) == -1){
+    //         this.foodArray.push(food.target.value)
+    //         food.target.value = ''
+    //     }
+    // }
+    // deletedFood: string = null
+    // deleteFood(foodIndex){
+    //     console.log("foodindex : ",foodIndex)
+    //     this.deletedFood = this.foodArray[foodIndex]
+    //     this.foodArray = this.foodArray.filter((val,index)=> index != foodIndex)
+    // }
+
+    qty : number = 1
+    addQty(event){
+        this.qty = event.target.value
+        console.log("P qty : ", this.qty)
+        event.target.value = ''
     }
-    deletedFood: string = null
-    deleteFood(foodIndex){
-        console.log("foodindex : ",foodIndex)
-        this.deletedFood = this.foodArray[foodIndex]
-        this.foodArray = this.foodArray.filter((val,index)=> index != foodIndex)
+
+    updateQty(updatedQty){
+        console.log("updatedQty : ",updatedQty)
+        this.qty = updatedQty
     }
 }

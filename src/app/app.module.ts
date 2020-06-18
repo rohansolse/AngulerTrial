@@ -14,6 +14,7 @@ import { TemplateVariableComponent } from './template-variable/template-variable
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ChildComponent } from './child/child.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ChildComponent } from './child/child.component';
     TemplateVariableComponent,
     HeaderComponent,
     ProfileComponent,
-    ChildComponent
+    ChildComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule

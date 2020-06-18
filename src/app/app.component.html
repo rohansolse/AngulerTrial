@@ -18,9 +18,14 @@
     <li *ngFor="let food of foodList">{{ food }}</li>
 </ul>
 <app-child (foodEvt)="addFruitInList($event)"></app-child> -->
-
+<!-- 
 Enter food to add : 
 <input type="text" name="" id="" (keyup.enter)="insertFood($event)">
 <hr>
 <app-child [foodArryInChild]="foodArray" (deletFoodEvt)="deleteFood($event)"></app-child>
-<p *ngIf="deletedFood">You deleted {{ deletedFood }}</p>
+<p *ngIf="deletedFood">You deleted {{ deletedFood }}</p> -->
+
+Enter Qty :
+<input type="text" name="" id="" (keyup.enter)="addQty($event)">
+<p>Total qty : {{ qty }}</p>
+<app-product [(qty)]="qty" ></app-product>
