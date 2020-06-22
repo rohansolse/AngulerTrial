@@ -1,1 +1,10 @@
-<p>product works!</p>
+<!-- <p>product works!</p> -->
+<div class="products">
+    <p>Product Name : {{ productData.name }}</p>
+    <p>Product Price : {{ productData.price }}</p>
+    <p>Product Qty : {{ productData.qty }}</p>
+    <h4>Total Product Price : {{ productData.price * productData.qty }}</h4>
+    <button (click)="updateCart()">{{ isAddedToCart ? "Remove from " : "Add to "}}Cart</button>
+    <button (click)="incQty()">+</button><button (click)="decQty()">-</button>
+    <hr>
+</div>

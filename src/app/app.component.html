@@ -1,2 +1,14 @@
-<p>app works</p>
-<app-product *ngFor="let product of data">{{ product }}</app-product>
+<!-- <p>app works</p> -->
+<div class="main-heading">
+    <h1>Store</h1>
+    <div *ngFor="let cartProduct of cartBucket">
+        <p>Name : {{ cartProduct.name }}, Price : {{ cartProduct.price }}, Qty : {{ cartProduct.qty }}</p>
+    </div>
+    <strong *ngIf="totalCartPrize != 0">Total Cart Value : {{ totalCartPrize }}</strong>
+</div>
+<hr>
+<app-product 
+    *ngFor="let product of data" 
+    [productData]="product"
+    (updateCartEvt)="updateCart($event)">
+</app-product>
