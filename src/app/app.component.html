@@ -1,18 +1,17 @@
 <p>app works</p>
-<!-- <div *ngIf="isLoggedIn; then profile; else loggin"></div>
+<!-- <ng-container *ngFor="let customer of customers">
+    <p *ngIf="customer.paid">{{ customer.name }} | {{ customer.price }}</p>
+</ng-container> -->
 
-<ng-template #profile >
-    <p>Welcome</p>
+<ng-template #brand let-company let-n="name" let-s="size">
+    <img src="https://picsum.photos/{{ s }}" alt="">
+    <h3>{{ n }}</h3>
 </ng-template>
 
-<ng-template #loggin >
-    <p>Your are guest</p>
-</ng-template>
-
-<ng-template ngFor let-name [ngForOf]="data">
-    <div>{{ name }}</div>
-</ng-template> -->
-<button (click)="update()">Show/Hide</button>
-<ng-template [ngIf]="show">
-    <app-counter></app-counter>
-</ng-template>
+<hr>
+<ng-container *ngTemplateOutlet="brand; context : rohan">
+</ng-container>
+<hr>
+<hr>
+<ng-container *ngTemplateOutlet="brand; context : roshan">
+</ng-container>

@@ -6,13 +6,11 @@ import { Component } from "@angular/core";
     styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-    // isLoggedIn: boolean = false
-    // data: string[] = ["rohan","roshan"]
-    constructor(){
-    }
-    show: boolean = false
-    update(){
-        this.show = !this.show
-    }
-
+    customers: any[] = [
+        {name : "rohan", paid : true, price : 244},
+        {name : "roshan",  paid : false, price : 250},
+        {name : "rohit", paid : true, price : 200}
+    ]
+    rohan = { name : 'rohan', size : 300}
+    roshan = { name : 'roshan', size : 200}
 }
