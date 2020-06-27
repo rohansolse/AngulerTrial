@@ -1,17 +1,24 @@
-<p>app works</p>
-<!-- <ng-container *ngFor="let customer of customers">
-    <p *ngIf="customer.paid">{{ customer.name }} | {{ customer.price }}</p>
-</ng-container> -->
+<h2>Git Trial</h2>
+<section id="commitBox">
+    <div>
+        <label for="">Dir/File Name :</label>
+        <input type="text" name="" id="" #dir>
+    </div>
+    <div>
+        <label for="">Commit msg : </label>
+        <input type="text" name="" id="" #msg>
+    </div>
+    <div>
+        <button (click)="updateRepo(dir.value,msg.value)" >Push Changes</button>
+    </div>
+</section>
+<hr>
 
-<ng-template #brand let-company let-n="name" let-s="size">
-    <img src="https://picsum.photos/{{ s }}" alt="">
-    <h3>{{ n }}</h3>
+<ng-template #list let-update>
+    <app-list [item]="update"></app-list>
 </ng-template>
 
-<hr>
-<ng-container *ngTemplateOutlet="brand; context : rohan">
-</ng-container>
-<hr>
-<hr>
-<ng-container *ngTemplateOutlet="brand; context : roshan">
-</ng-container>
+
+<app-wrapper [newUpdate]="update" [listTemplate]="list">
+    <small>Ng-Studio</small>
+</app-wrapper>

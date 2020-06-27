@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";  
+import { directiveCreate } from "@angular/core/src/render3/instructions";
 
 @Component({
     selector: "app-root",
@@ -6,11 +7,20 @@ import { Component } from "@angular/core";
     styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-    customers: any[] = [
-        {name : "rohan", paid : true, price : 244},
-        {name : "roshan",  paid : false, price : 250},
-        {name : "rohit", paid : true, price : 200}
-    ]
-    rohan = { name : 'rohan', size : 300}
-    roshan = { name : 'roshan', size : 200}
+    history = []
+    update = {}
+    updateRepo(dir,msg){
+        console.log("00 : ",dir,msg)
+        this.history.push({
+            name : dir,
+            isFile : dir.includes('.'),
+            time : new Date()
+        })
+
+        this.update = {
+            name : dir,
+            msg,
+            history : this.history
+        }
+    }
 }

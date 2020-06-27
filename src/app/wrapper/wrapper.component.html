@@ -1,0 +1,15 @@
+<!-- <p>wrapper works!</p> -->
+<section>
+    <header>
+        <h3>Repo Name :
+            <ng-content></ng-content>
+        </h3>
+        <p *ngIf="newUpdate.name">{{ newUpdate.name }} | {{ newUpdate.msg }}</p>
+    </header>
+
+    <section *ngIf="newUpdate.history">
+        <ng-container *ngFor="let update of newUpdate.history">
+            <ng-container *ngTemplateOutlet="listTemplate; context : { $implicit : update }"></ng-container>
+        </ng-container>
+    </section>
+</section>
